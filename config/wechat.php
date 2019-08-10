@@ -11,9 +11,9 @@ return [
     /**
      * 账号基本信息，请从微信公众平台/开放平台获取
      */
-    'app_id'  => env('APP_ID',''),         // AppID
-    'secret'  => env('APP_SECRET',''),     // AppSecret
-    'token'   => 'your-token',          // Token
+    'app_id'  => env('APP_ID','wx3bb935d5fdda69e4'),         // AppID
+    'secret'  => env('APP_SECRET','f27d5a11a52e419adc462c9e8161a35b'),     // AppSecret
+    'token'   => 'xzw',          // Token
     'aes_key' => '',                    // EncodingAESKey，安全模式与兼容模式下请一定要填写！！！
     'response_type' => 'collection',
     /**
