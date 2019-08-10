@@ -12,7 +12,13 @@ use App\User;
 
 class WechatController extends Controller
 {
-
+    //微信验证
+    public function index()
+    {
+        $app = app('wechat');
+        $response = $app->server->serve();
+        return $response;
+    }
     public function redirect(Request $request)
     {
         $app = app('wechat');
