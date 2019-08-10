@@ -16,7 +16,7 @@ class WechatController extends Controller
     public function wechat_web_login()
     {
         if (Auth::check()) {
-            return redirect('/home');
+            return redirect('home');
         }
         return view('wechat_web_login');
     }
@@ -75,7 +75,7 @@ class WechatController extends Controller
         }
         Cache::forget($code);
         Auth::login($user);
-        return redirect('/home');
+        return redirect('home');
     }
 
     public function login_code_state($code)
