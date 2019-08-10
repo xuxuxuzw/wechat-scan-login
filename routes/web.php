@@ -19,12 +19,12 @@ Auth::routes();
 
 //\Auth::login(\App\User::find(1));
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
 
 
-Route::get('wechat/index','WechatController@index')->name('wechat.index');//微信token校验
-Route::get('wechat/redirect','WechatController@redirect')->name('wechat.redirect');
-Route::get('wechat/callback','WechatController@callback')->name('wechat.callback');
+Route::get('wechat/index','WechatController@index');//微信token校验
+Route::get('wechat/redirect','WechatController@redirect');
+Route::get('wechat/callback','WechatController@callback');
 
 Route::group(['middleware'=>'auth'],function(){
 
