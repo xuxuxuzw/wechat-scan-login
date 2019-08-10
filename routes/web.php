@@ -29,9 +29,9 @@ Route::get('wechat/callback','WechatController@callback');
 Route::group(['middleware'=>'auth'],function(){
 
     Route::group(['as'=>'api.home.','prefix'=>'api/home'],function(){
-        Route::post('wechat/confirm_login','Home\WechatController@confirm_login')->name('wechat.confirm_login');//确认登录
-        Route::post('wechat/cancel_login','Home\WechatController@cancel_login')->name('wechat.cancel_login');//取消登陆
-        Route::post('wechat/login/{code}/state','Home\WechatController@login_code_state')->name('wechat.login_code_state');//已扫描状态
+        Route::post('wechat/confirm_login','Home\WechatController@confirm_login');//确认登录
+        Route::post('wechat/cancel_login','Home\WechatController@cancel_login');//取消登陆
+        Route::post('wechat/login/{code}/state','Home\WechatController@login_code_state');//已扫描状态
     });
 });
 
