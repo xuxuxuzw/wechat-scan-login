@@ -16,7 +16,7 @@ class WechatController extends Controller
     public function wechat_web_login()
     {
         if (Auth::check()) {
-            return redirect('home');
+            return redirect()->action('HomeController@index');
         }
         return view('wechat_web_login');
     }
